@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
-
-  # Defines the root path route ("/")
-  # root "posts#index"
+  resources :houses, only: [:show] do
+    resources :monsters, only: [:new, :create]
+  end
+  resources :monsters, only: [:destroy]
 end
+# As a user I can see one haunted house's monsters
+# houses#show
+# get '/houses/:id', to: 'houses#show', as: :house
+
+# As a user I can condemn a monster in a haunted house
+# monsters#new / monsters#create
+# get 'houses/:house_id/monsters/new'
+# post 'houses/:house_id/monsters'
+
+# As a user I can release a monster
+# monsters#destroy
+# delete 'monsters/:id'

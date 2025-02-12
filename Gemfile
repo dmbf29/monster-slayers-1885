@@ -68,3 +68,5 @@ end
 
 # Custom Added
 gem 'ostruct'
+gem "sassc-rails"
+gem 'simple_form'
