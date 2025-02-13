@@ -67,6 +67,7 @@ group :test do
 end
 
 # Custom Added
+gem 'faker'
 gem 'ostruct'
 gem "sassc-rails"
 gem 'simple_form'
