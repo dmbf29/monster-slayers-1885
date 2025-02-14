@@ -1,5 +1,7 @@
 <%= simple_form_for [house, monster] do |f| %>
   <%= f.input :name %>
-  <%= f.input :image_url %>
+  <!-- NO more string URLs -->
+  <%#= f.input :image_url %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit 'Condemn', class: 'btn btn-danger mt-2' %>
 <% end %>

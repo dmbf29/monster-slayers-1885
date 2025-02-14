@@ -68,6 +68,8 @@ end
 
 # added
 # Custom Added
+gem "cloudinary"
+gem "dotenv-rails"
 gem 'faker'
 gem 'ostruct'
 gem "sassc-rails"
