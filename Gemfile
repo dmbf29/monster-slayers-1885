@@ -66,6 +66,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
+# added
 # Custom Added
 gem 'faker'
 gem 'ostruct'
